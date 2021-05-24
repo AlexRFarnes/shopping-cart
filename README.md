@@ -19,7 +19,7 @@ A fully functional shopping cart implementation from scratch with local storage 
 ## Screenshots
 
 ![Screenshot_2021-05-24 Store](https://github.com/AlexRFarnes/shopping-cart/blob/main/image/Screenshot_2021-05-24%20Store.png)
-[Demo]()
+[Demo](https://laughing-chandrasekhar-d23771.netlify.app)
 
 ## Technologies
 
