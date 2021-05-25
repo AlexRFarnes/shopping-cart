@@ -11,10 +11,18 @@ const shoppingItemsContainer = document.querySelector(
 const cartItemTemplate = document.getElementById('item-cart');
 const shoppingItems = document.querySelector('[data-shopping-items]');
 const price = document.querySelector('[data-total-price]');
-let storeCartItems = JSON.parse(localStorage.getItem('shoppingCart')) || [];
 
-function saveItemsToStorage() {
-  localStorage.setItem('shoppingCart', JSON.stringify(storeCartItems));
+const LOCAL_STORAGE_PREFIX = 'SHOPPING_CART';
+const CART_STORAGE_KEY = `${LOCAL_STORAGE_PREFIX}-items`;
+
+let storeCartItems = loadItems();
+
+function loadItems() {
+  return JSON.parse(localStorage.getItem(CART_STORAGE_KEY)) || [];
+}
+
+function saveItems() {
+  localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(storeCartItems));
 }
 
 function renderCartButton() {
@@ -100,7 +108,7 @@ function updateCart() {
 
     shoppingItems.appendChild(cartItem);
   });
-  saveItemsToStorage();
+  saveItems();
   showItemsOnCartButton();
   calculateTotal();
   renderCartButton();
