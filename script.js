@@ -133,4 +133,3 @@ cartButton.addEventListener('click', () => {
   shoppingItemsContainer.classList.toggle('invisible');
 });
 
-// console.log(items);
