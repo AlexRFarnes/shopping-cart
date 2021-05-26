@@ -27,10 +27,9 @@ function saveItems() {
 
 function renderCartButton() {
   if (storeCartItems.length === 0) {
-    cartButton.classList.add('invisible');
-    shoppingItemsContainer.classList.add('invisible');
+    cartButton.closest('section').classList.add('invisible');
   } else {
-    cartButton.classList.remove('invisible');
+    cartButton.closest('section').classList.remove('invisible');
   }
 }
 
