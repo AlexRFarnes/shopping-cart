@@ -88,7 +88,7 @@ function updateCartQuantity() {
 function renderCart() {
   if (shoppingCartItems.length === 0) {
     document.querySelector('[data-cart-section]').classList.add('invisible');
-    cartItemsContainer.classList.toggle('invisible');
+    cartItemsContainer.classList.add('invisible');
   } else {
     document.querySelector('[data-cart-section]').classList.remove('invisible');
   }
